@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo</title>
+    <style>
+        button{
+            background-color: gray;
+            color: white;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cubo</h2>
+    <button id="botao" onclick="inicio()">Clique aqui para começar</button>
+    <section id="resultado">Aqui vai aparecer o resultado..</section>
+
+    <script>
+        function inicio(){
+            var num= window.prompt('Digite um número:')
+            var res= window.document.getElementById('resultado')
+            res.innerHTML=`O número ${num} elevado ao cubo é ${num**3}.`
+        }
+    </script>
+</body>
+</html>

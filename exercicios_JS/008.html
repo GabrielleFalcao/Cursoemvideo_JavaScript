@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex008</title>
+</head>
+<body>
+    <h1>Maior valor</h1>
+    <p>Digite um número: <input type="number" name="txtnum1" id="txtnum1"></p>
+    <p>Digite outro número: <input type="number" name="txtnum2" id="txtnum2"></p>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var num1= document.getElementById('txtnum1')
+            var n1= Number(num1.value)
+            var num2= document.getElementById('txtnum2')
+            var n2= Number(num2.value)
+            var res= document.getElementById('res')
+            if(n1>n2){
+                res.innerHTML= `O número ${n1} é maior.`
+            } else{
+                res.innerHTML= `O número ${n2} é maior.`
+            }
+        }
+    </script>
+</body>
+</html>

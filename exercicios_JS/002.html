@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit para Celsius</title>
+    <style>
+        button{
+            font-family: 'Times New Roman', Times, serif;
+            background: black;
+            color: white;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fahrenheit para Celsius</h1>
+    <button onclick="result()">Clique aqui para começar</button>
+    <section id="resultado">Aqui aparecerá o resultado..</section>
+    <script>
+        function result(){
+            var f= window.prompt('Digite a temperatura em Fahrenheit:')
+            var res= window.document.getElementById('resultado')
+            var celsius= (f-32)*0.5556
+            res.innerHTML=`A temperatura em Celsius é ${celsius}`
+        }
+    </script>
+</body>
+</html>

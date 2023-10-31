@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do triângulo</title>
+    <style>
+        button{
+            font-family: 'Times New Roman', Times, serif;
+            background: black;
+            color: white;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Área do triângulo</h1>
+    <button onclick="result()">Clique aqui para começar..</button>
+    <section id="resultado">Aqui aparecerá o resultado..</section>
+    
+    <script>
+    function result(){
+        var altura= window.prompt('Digite a altura do triângulo:')
+        var largura= window.prompt('Digite a largura do triângulo:')
+        var area= altura*largura
+        var res= window.document.getElementById('resultado')
+        res.innerHTML=`A área do triângulo é ${area}`}
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex011</title>
+</head>
+<body>
+    <h1>Senha de acesso</h1>
+    <p>Digite a senha:</p>
+    <p><input type="number" name="txtnum" id="txtnum"></p>
+    <p><input type="button" value="verificar" onclick="verificar()"></p>
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+        var numero= document.getElementById('txtnum')
+        var num= Number(numero.value)
+        var res= document.getElementById('res')
+
+        if(num==1234){
+            res.innerHTML="Acesso permitido!"
+        } else{
+            res.innerHTML="Acesso negado"
+        }}
+    </script>
+</body>
+</html>

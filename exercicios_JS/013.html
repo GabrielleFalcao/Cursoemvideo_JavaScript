@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem decrescente</title>
+</head>
+<body>
+    <h1>Ordem decrescente</h1>
+    <p>Digite o 1º número: <input type="number" name="txtnum1" id="txtnum1"></p>
+    <p>Digite o 2º número: <input type="number" name="txtnum2" id="txtnum2"></p>
+    <p>Digite o 3º número: <input type="number" name="txtnum3" id="txtnum3"></p>
+    <p><input type="button" value="verificar" onclick="verificar()"></p>
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var numero1= document.getElementById('txtnum1')
+            var num1= Number(numero1.value)
+            var numero2= document.getElementById('txtnum2')
+            var num2= Number(numero2.value)
+            var numero3= document.getElementById('txtnum3')
+            var num3= Number(numero3.value)
+            var res = document.getElementById('res')
+            if(num1>num2 && num2>num3){
+                res.innerHTML=`${num1}, ${num2}, ${num3}`
+            } else if (num1>num2 && num2<num3){
+                res.innerHTML=`${num1},${num3},${num2}`
+            } else if (num2>num1 && num1>num3){
+                res.innerHTML=`${num2},${num1},${num3}`
+            } else if(num2>num1 && num1<num3){
+                res.innerHTML=`${num2},${num3},${num1}`
+            } else if(num3>num1 && num1>num2){
+                res.innerHTML=`${num3},${num1},${num2}`
+            } else if(num3>num1 && num1<num2){
+                res.innerHTML=`${num3},${num2},${num1}`
+            } else{
+                res.innerHTML="Erro! Tente novamente.."
+            }}
+    </script>
+</body>
+</html>

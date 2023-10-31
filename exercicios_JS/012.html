@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior de 3</title>
+</head>
+<body>
+    <h1>Maior de 3</h1>
+    <p>Digite o primeiro número: <input type="number" name="txtnum1" id="txtnum1"></p>
+    <p>Digite o segundo número: <input type="number" name="txtnum2" id="txtnum2"></p>
+    <p>Digite o terceiro número: <input type="number" name="txtnum3" id="txtnum3"></p>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+        var numero1= document.getElementById('txtnum1')
+        var num1= Number(numero1.value)
+        var numero2= document.getElementById('txtnum2')
+        var num2= Number(numero2.value)
+        var numero3=document.getElementById('txtnum3')
+        var num3= Number(numero3.value)
+        var res= document.getElementById('res')
+
+        if (num1>num2 && num1>num3){
+            res.innerHTML=`O número ${num1} é o maior.`
+        }
+        else if(num2>num1 && num2>num3){
+            res.innerHTML=`O número ${num2} é o maior.`
+        }
+        else{
+            res.innerHTML=`O número ${num3} é o maior.`
+        }
+        }
+    </script>
+</body>
+</html>

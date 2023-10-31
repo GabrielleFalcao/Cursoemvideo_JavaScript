@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009</title>
+</head>
+<body>
+    <h1>Frutas</h1>
+    Digite o nº correspondente a fruta que deseja:<br>
+    1- Maçã<br>
+    2- Kiwi<br>
+    3- Melancia<br>
+    <input type="number" name="txtfruta" id="txtfruta"><br>
+    <input type="button" value="Comprar" onclick="comprar()">
+    <div id="res"></div>
+
+    <script>
+        function comprar(){
+        var fruit= document.getElementById('txtfruta')
+        var fruta= Number(fruit.value)
+        var res= document.getElementById('res')
+
+        switch(fruta){
+            case 1:
+                res.innerHTML="Não vendemos esta fruta aqui"
+                break
+            case 2:
+                res.innerHTML="Estamos com escassez de kiwis"
+                break
+            case 3:
+                res.innerHTML="Aqui está, são 3 reais o quilo"
+                break
+            default:
+                res.innerHTML="Erro! Não temos essa opção"
+        }}
+    </script>
+</body>
+</html>

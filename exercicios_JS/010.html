@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Classificação dos produtos</h1>
+    <p>Digite o código do produto para ver a classificação:</p>
+    <p><input type="number" name="txtproduto" id="txtproduto"></p>
+    <p><input type="button" value="verificar" onclick="verificar()"></p>
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+        var codigoProduto= document.getElementById('txtproduto')
+        var produto= Number(codigoProduto.value)
+        var res= document.getElementById('res')
+
+        switch(produto){
+            case 1:
+                res.innerHTML="Alimento não perecível"
+                break
+            case 2,3,4:
+                res.innerHTML="Alimento perecível"
+                break
+            case 5,6:
+                res.innerHTML="Vestuário"
+                break
+            case 7:
+                res.innerHTML="Higiene pessoal"
+                break
+            case 8,9,10,11,12:
+                res.innerHTML="Limpeza e utensílios domésticos"
+                break
+            default:
+                res.innerHTML="Erro! Código não existe."
+                break
+        }
+        }
+    </script>
+</body>
+</html>
